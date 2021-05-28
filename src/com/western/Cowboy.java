@@ -1,27 +1,36 @@
 package com.western;
 
-public class Cowboy extends Humain{
+public class Cowboy extends Human {
+    private int popularity;
+    private String adjective;
 
-    private String nom;
-    private int popularite;
-    private String adjectif = "vaillant";
-
-    // Constructeur
-    public Cowboy(String unNom, String uneBoisson, int unePopularite, String unAdjectif) {
-        super(unNom, uneBoisson);
-        nom = unNom;
-        popularite = unePopularite;
-        adjectif = unAdjectif;
+    public Cowboy(String name) {
+        super(name);
+        this.favoriteDrink="whisky";
+        this.popularity=0;
+        this.adjective="Vaillant";
     }
 
-    // Méthodes
-    public String libererDame(Dame UneDame) {
-        return "Je me suis débarrasser de lui, vous êtes libre maintenant.";
+    public void shootThief(Thief thief) {
+        System.out.println("Le "+ this.adjective+" "+this.sayName() +" tire sur "+thief.sayName()+ " PAN!");
+        this.talk("Prends ça rascal!");
     }
 
-    public String tirerBrigand(Brigand unBrigand) {
-        return "Le " + adjectif + " " + nom + "tire sur " + unBrigand.quelEstTonNom() +". PAN !";
-        //return "Prend ça, rascal !";
+    public void freeLady(Lady lady) {
+        this.talk("Que vous êtes belle!!!");
+        if (lady.isCaptive()) {
+            lady.beFreed(this);
+            this.popularity++;
+        }else {
+            lady.talk("Je suis déja libre");
+        }
+    }
+
+    @Override
+    public void introduceHimself() {
+        super.introduceHimself();
+        this.talk("je suis un cowboy "+this.adjective+"!");
+        this.talk("Pour l'instant, j'ai une popularité de "+this.popularity+".");
     }
 
 }
