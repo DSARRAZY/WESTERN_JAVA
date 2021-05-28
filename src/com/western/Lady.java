@@ -16,7 +16,7 @@ public class Lady extends Human {
         this.isCaptive = true;
     }
 
-    public void beFreed(Cowboy cowboy) {
+    public void beFree(Cowboy cowboy) {
         this.talk("Merci " + cowboy.getName());
         this.isCaptive = false;
     }

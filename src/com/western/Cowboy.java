@@ -23,4 +23,14 @@ public class Cowboy extends Human {
         this.talk("Pour l'instant, j'ai une popularité de "+this.popularity+".");
     }
 
+    public void freeLady(Lady lady) {
+        this.talk("Que vous êtes belle!!!");
+        if (lady.isCaptive()) {
+            lady.beFree(this);
+            this.popularity++;
+        }else {
+            lady.talk("Je suis déja libre");
+        }
+    }
+
 }
