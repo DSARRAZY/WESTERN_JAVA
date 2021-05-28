@@ -1,6 +1,6 @@
 package com.western;
 
-public class Lady extends Human {
+public class Lady extends Human implements PaleFace{
 
     private String dressColor;
     private boolean isCaptive;
@@ -11,7 +11,7 @@ public class Lady extends Human {
         this.dressColor="orange";
     }
 
-    public void beKidnapped(Thief thief) {
+    public void beKidnapped(Outlaw thief) {
         this.talk("'Hurle'");
         this.isCaptive = true;
     }
@@ -39,6 +39,12 @@ public class Lady extends Human {
     public void introduceHimself() {
         super.introduceHimself();
         this.talk("Regardez ma jolie robe "+this.dressColor);
+    }
+
+    @Override
+    public void scalpBy(Indian indian) {
+        this.talk("Aïe ma tête !!");
+        indian.scalp();
     }
 
 }

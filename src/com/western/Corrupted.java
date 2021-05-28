@@ -2,28 +2,28 @@ package com.western;
 
 public class Corrupted extends Sheriff implements Outlaw{
 
-    private String look;
-    private int nbKidnappedLadies;
-    private int rewardValue;
-    private boolean isInJail;
 
     public Corrupted(String name) {
         super(name);
     }
 
-    public boolean getisInJail() {
-        return isInJail;
-    }
     @Override
     public String sayName() {
-        return super.sayName() + " " + this.look ;
+        return null;
     }
 
     @Override
-    public void introduceHimself() {
-        super.introduceHimself();
-        this.talk("j'ai l'air "+this.look+ " et j'ai déjà kidnappé "+ this.nbKidnappedLadies+ " dames");
-        this.talk("ma tête est mise à prix à "+this.rewardValue+ "$");
+    public void kidnap(Lady lady) {
+
     }
 
+    @Override
+    public void jailled(Cowboy cowboy) {
+
+    }
+
+    @Override
+    public int getRewardValue() {
+        return 0;
+    }
 }

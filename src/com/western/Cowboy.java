@@ -1,6 +1,6 @@
 package com.western;
 
-public class Cowboy extends Human {
+public class Cowboy extends Human implements PaleFace {
     private int popularity;
     private String adjective;
 
@@ -31,6 +31,11 @@ public class Cowboy extends Human {
         }else {
             lady.talk("Je suis déja libre");
         }
+    }
+
+    @Override
+    public void scalpBy(Indian indian) {
+        this.talk("Aïe ma tête !!");
     }
 
 }
