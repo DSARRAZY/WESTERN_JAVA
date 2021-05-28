@@ -16,31 +16,6 @@ public class Thief extends Human  {
         this.isInJail = false;
     }
 
-
-//    @Override
-//    public void kidnap(Lady lady) {
-//        this.talk("Ahah ! " + lady.getName() + ", tu es mienne désormais !");
-//        lady.beKidnapped(this);
-//        this.nbKidnappedLadies++;
-//        this.rewardValue = rewardValue + 100;
-//    }
-
-//    @Override
-//    public void jailled(Cowboy cowboy) {
-//        this.talk("Damn ! " + cowboy.getName() + ", tu m'a eu !");
-//        this.isInJail=true;
-//        System.out.println(cowboy.getName() + " a remporté la prime de " + this.getRewardValue() + "$");
-//    }
-//
-//    @Override
-//    public int getRewardValue() {
-//        return rewardValue;
-//    }
-
-    public boolean getisInJail() {
-        return isInJail;
-    }
-
     @Override
     public String sayName() {
         return super.sayName() + " " + "le "+ this.look ;

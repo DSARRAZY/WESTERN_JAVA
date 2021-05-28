@@ -18,6 +18,16 @@ public class History {
         System.out.println("Quelle est votre nom ? "+ thief.sayName());
         //thief.kidnap(lady);
 
+        Barman barman = new Barman("Jack");
+        barman.introduceHimself();;
+        barman.serve(human);
+
+        Sheriff Clint = new Sheriff("Clint");
+        Clint.introduceHimself();;
+        Clint.search(thief);
+
+
+
 
 
 

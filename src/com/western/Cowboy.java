@@ -16,16 +16,6 @@ public class Cowboy extends Human {
         this.talk("Prends ça rascal!");
     }
 
-    public void freeLady(Lady lady) {
-        this.talk("Que vous êtes belle!!!");
-        if (lady.isCaptive()) {
-            lady.beFreed(this);
-            this.popularity++;
-        }else {
-            lady.talk("Je suis déja libre");
-        }
-    }
-
     @Override
     public void introduceHimself() {
         super.introduceHimself();
